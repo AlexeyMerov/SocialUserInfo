@@ -1,0 +1,2 @@
+# SocialUserInfo
+Test Social Authorization
