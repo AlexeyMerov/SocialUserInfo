@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbarLayout"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+
+            />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="195dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/additionalFieldsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLayout"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Enter necessary fields"
+                android:textAlignment="center"
+                android:textColor="@color/vermillion"
+                android:textSize="18sp"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/firstNameLayout"
+                style="@style/TextInputLayout"
+                android:hint="First Name"
+
+                android:visibility="gone"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/firstNameEditText"
+                    style="@style/TextInputEditText"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._-@"
+                    android:inputType="textEmailAddress"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lastNameLayout"
+                style="@style/TextInputLayout"
+                android:hint="Last Name"
+
+                android:visibility="gone"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/lastNameEditText"
+                    style="@style/TextInputEditText"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._-@"
+                    android:inputType="textEmailAddress"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phoneNumberLayout"
+                style="@style/TextInputLayout"
+                android:hint="Phone"
+                android:visibility="gone"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/phoneNumberEditText"
+                    style="@style/TextInputEditText"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._-@"
+                    android:inputType="textEmailAddress"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/emailLayout"
+                style="@style/TextInputLayout"
+                android:hint="Email"
+
+                android:visibility="gone"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    style="@style/TextInputEditText"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._-@"
+                    android:inputType="textEmailAddress"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/genderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/genderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textColor="@color/true_black"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/birthdayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical"
+
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+                    android:text="Birthday"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/birthdayTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/true_black"
+                    android:textSize="14sp"
+
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:text="Continue"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

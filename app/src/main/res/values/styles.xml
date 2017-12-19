@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="hintTextAppearance">@style/TextInputLayoutHint</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="TextInputLayoutHint">
+        <item name="colorAccent">@color/true_black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextInputEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/black_38</item>
+        <item name="colorControlNormal">@color/grey_3</item>
+        <item name="colorControlActivated">@color/true_black</item>
+        <item name="colorControlHighlight">@color/true_black</item>
+        <item name="android:theme">@style/TextInputEditText</item>
+    </style>
+
+</resources>

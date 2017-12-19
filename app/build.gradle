@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.testapp.socialuserinfo"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    def supportLib = '27.0.1'
+    def retrofit = '2.3.0'
+    def playServices = '10.2.0'
+
+    implementation 'com.google.android.gms:play-services-auth:11.6.2'
+    implementation 'com.google.api-client:google-api-client:1.23.0'
+    implementation 'com.google.api-client:google-api-client-android:1.23.0'
+    implementation 'com.google.apis:google-api-services-people:v1-rev193-1.23.0'
+
+    //support
+    implementation "com.android.support:design:${supportLib}"
+    implementation "com.android.support:recyclerview-v7:${supportLib}"
+    implementation "com.android.support:appcompat-v7:${supportLib}"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:${retrofit}"
+    implementation "com.squareup.retrofit2:converter-moshi:${retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofit}"
+
+    //rx
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.5'
+
+    //image loader
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+
+    //adapter and stuff for recycler
+    implementation 'com.github.thorbenprimke:realm-recyclerview:0.9.25'
+    implementation 'io.realm:android-adapters:2.1.1'
+
+    //dagger
+    implementation 'com.google.dagger:dagger:2.12'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.12'
+
+
+    //view binding
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //permissions
+    implementation 'com.karumi:dexter:4.2.0'
+
+    //stick view inside scrollview
+    implementation 'se.emilsjolander:StickyScrollViewItems:1.1.0'
+
+    //image picker
+    implementation 'com.github.jkwiecien:EasyImage:1.3.1'
+
+    implementation 'com.facebook.android:facebook-login:4.29.0'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

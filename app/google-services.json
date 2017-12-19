@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "444009213035",
+    "project_id": "firebase-socialuserinfo"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444009213035:android:062d2b2bf084f359",
+        "android_client_info": {
+          "package_name": "com.testapp.socialuserinfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444009213035-4jr5a3mckande137vtdjqg5pnfotb35p.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "444009213035-p4hdm7i1d4hembpep6342spnjcbfp3pf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.testapp.socialuserinfo",
+            "certificate_hash": "d69881ed41e720f87f98c3c6b1e39be1240bb306"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj275UDJo_qw2p2lwtD9a1jEirhmgLzOA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
